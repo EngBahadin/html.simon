@@ -1,0 +1,149 @@
+body {
+  text-align: center;
+  background-image: url(./animated-gifs-of-fighting-game-backgrounds-8.gif);
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+
+.play{
+  font-family:Arial, Helvetica, sans-serif, cursive;
+  font-size: 3rem;
+  margin: 70px auto 0px auto;
+   background-color: rgb(50, 1, 1);
+  width: max-content;
+  border-radius: 20px;
+  color: black;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 0px 0px 10px rgb(106, 0, 0);
+  text-shadow: 0px 0px 2px rgb(247, 19, 19);
+}
+.display-none{
+  display: none;
+}
+
+.material-icons{
+  background-color: azure;
+  width:25px;
+  border-radius: 50%;
+}
+.icon{
+  color: rgb(0, 0, 0);
+  background-color: #3b0703;
+  box-shadow:inset 0px 0px 6px rgb(114, 2, 2);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin:-65px 20px 0px auto;
+  
+}
+a{
+  text-decoration: none;
+}
+.material-icons:active{
+color: aliceblue;
+}
+.icon:hover {
+  cursor: pointer;
+  opacity: 90%;
+  text-shadow:0px 0px 20px rgb(255, 255, 255);
+  transform:scale(1.1);
+}
+
+.centering{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play:hover{
+  cursor: pointer;
+  color: #FEF2BF;
+  transform: scale(1.09) ;
+  text-shadow: 0px 0px 3px white;
+}
+.play:active{
+  background-color: blanchedalmond;
+}
+
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+
+  border-radius: 50%;
+}
+.f1{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+}
+
+img:hover{
+  opacity: 60%;
+  cursor: pointer;
+  border-color: #7a7a7a;
+}
+
+.game{
+  font-family:Arial, Helvetica, sans-serif, cursive;
+  font-size: 1.5rem;
+  width: max-content;
+  border-radius: 20px;
+  color: #FEF2BF;
+  padding: 10px 15px 10px 15px;
+  margin: 5px auto 0px auto;
+  text-shadow: 2px 2px 2px rgb(111, 45, 45);
+}
+
+.transition{
+  transition: 1s;
+  opacity: 0;
+}
+
+.cratos-red{
+  position: absolute;
+  inset: 0;
+  background: rgb(95, 0, 0);
+  border-radius: 50%;
+  opacity: 10%;
+}
+
+.green {
+position: relative;
+}
+.new-background{
+  background-image: url(./giphy.gif);
+}
+.no-imageAndBorder{
+  display: none;
+  border: none;
+}
+img{
+ border: 3px solid rgb(32, 34, 33);
+ opacity: 90%;
+}
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
