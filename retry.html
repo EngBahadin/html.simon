@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon</title>
     <style>
+        html {
+            text-align: center;
+            background-image: url(./animated-gifs-of-fighting-game-backgrounds-8.gif);
+            background-size: cover;
+            height: 1000px;
+        }
 
-html{
-    text-align: center;
-  background-image: url(./animated-gifs-of-fighting-game-backgrounds-8.gif);
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-  background-size:cover;
- height: 1000px;
-}
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-.paragraph{
-  background-color: rgb(63, 2, 2);
-  opacity:80%;
-  line-height: 30px;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 10px;
-  border:1px solid black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow:inset 0px 0px 3px rgb(255, 141, 141);
-}
-.button{
-    background-color:rgb(63, 2, 2);
-    color: azure;
-    font-weight: bold ;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 15px;
-    opacity: 70%;
-    box-shadow:inset 0px 0px 3px rgb(255, 17, 17);
-}
-.button:hover{
- opacity: 100%;
- background-color:rgb(91, 4, 4) ;
- scale: 1.1;
- text-shadow:0px 0px 3px whitesmoke;
-}
-a{
-   text-decoration: none; 
-}
+        .paragraph {
+            background-color: rgb(63, 2, 2);
+            opacity: 80%;
+            line-height: 30px;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: white;
+            box-shadow: inset 0px 0px 3px rgb(255, 141, 141);
+        }
 
+        .button {
+            background-color: rgb(63, 2, 2);
+            color: azure;
+            font-weight: bold;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 15px;
+            opacity: 70%;
+            box-shadow: inset 0px 0px 3px rgb(255, 17, 17);
+        }
+
+        .button:hover {
+            opacity: 100%;
+            background-color: rgb(91, 4, 4);
+            scale: 1.1;
+            text-shadow: 0px 0px 3px whitesmoke;
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
-    <a  href="./index.html"><h1 class="button">Cancel</h1></a>
+    <a href="./index.html">
+        <h1 class="button center">Cancel</h1>
+    </a>
 
     <div class="center">
-<p class="paragraph">The Simon game is the exciting electronic game of lights and sounds in which players must repeat random sequences <br>
-      of lights by pressing the charactered pads in the correct order. It's fast-paced play, with lights and sounds that can <br>
-      challenge you. Experience the fun as you repeat the patterns and advance to higher levels. Keep track of your <br>
-      score as you challenge friends or try to beat your own high score. Includes Simon game unit and instructions. </p>
-</div>
+        <p class="paragraph">The Simon game is the exciting electronic game of lights and sounds in which players must
+            repeat random sequences <br>
+            of lights by pressing the charactered pads in the correct order. It's fast-paced play, with lights and
+            sounds that can <br>
+            challenge you. Experience the fun as you repeat the patterns and advance to higher levels. Keep track of
+            your <br>
+            score as you challenge friends or try to beat your own high score. Includes Simon game unit and
+            instructions. <br>
+            HINT: don't click anything till it shows you the next step because it does't work
+        </p>
+    </div>
 </body>
+
 </html>

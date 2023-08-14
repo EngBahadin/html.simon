@@ -7,33 +7,30 @@ var level = 0;
 var scoreLevel = level;
 var play = true;
 $("h1").text("Play");
-   $("h1").click(function(){
+$("h1").click(function () {
   playSound("play");
-}); 
+});
 
-$("i").click(function(){
+$("i").click(function () {
   playSound("play");
-}); 
-$(".play").on("click",function () {
+}); // this doesnt work!
+
+$(".play").on("click", function () {
   $("h1").addClass("transition");
-  setTimeout(function(){
-    $("h1").addClass("display-none"); 
-  },500);
+  setTimeout(function () {
+    $("h1").addClass("display-none");
+  }, 500);
 
-   $(".game").text("Level " + level);
-    nextSequence();
-    started = true;
-    playLoop("scary");
+  $(".gameLevel").text("Level " + level);
+  nextSequence();
+  started = true;
+  playLoop("scary");
 
   checkAnswer(userClickedPattern.length - 1);
 });
 
-$(".paragraph").click(function(){
 
-})
-
-
-$(".btn").on("click",function () {
+$(".btn").on("click", function () {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
   checkAnswer(userClickedPattern.length - 1)
@@ -50,29 +47,26 @@ function checkAnswer(currentLevel) {
 
     }
   } else {
-    $(".btn").addClass("transition")
-    var wrong = new Audio("sounds/fail.mp3");
+    // $(".btn").addClass("transition"); 
     wrong.play();
     startOver();
-    background();  
+    background();
   }
 }
 
 
 function nextSequence() {
   level++;
-
-  $(".game").text("Level " + level);
+  $(".gameLevel").text("Level: " + level);
   userClickedPattern = [];
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
-  setTimeout(function(){
-    $("img").css("opacity","100%");
-      $("#" + randomChosenColour).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
-  playSound("button");
-  },1500);
+  setTimeout(function () {
+    $("#" + randomChosenColour).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+    playSound("button");
+  }, 1500);
 
 }
 
@@ -90,32 +84,37 @@ function animatePress(currentColor) {
 
 function startOver() {
   gamePattern = [];
-  
   started = false;
-  $("h1").removeClass("transition");
+  $("h1").removeClass("transition display-none");
   $(".btn").removeClass("transition");
-  $("h1").removeClass("display-none");
-   $("h1").css("margin-top","200px");
-     $("h1").text("Retry");
-     if(level>scoreLevel){
-      scoreLevel = level;
-      $(".game").text("highest score :" + scoreLevel);
-     }
-level = 0;
+  $("h1").css("margin-top", "200px");
+  $("h1").text("Retry");
+  if (level > scoreLevel) {
+    scoreLevel = level;
+    $(".gameLevel").text("YOU SCORED A NEW RECORD: " + scoreLevel);
+  } else {
+    $(".gameLevel").text("YOU LOST, YOU BROUGHT SHAME TO YOUR FAMILY LEVEL: " + scoreLevel);
+  }
+  level = 0;
 }
 
-function background(){
+function background() {
 
   $("body").addClass("new-background");
-  $(".btn").addClass("no-imageAndBorder");
-  $("h1").on("click",function(){
-  $("body").removeClass("new-background"); 
-  $(".btn").removeClass("no-imageAndBorder"); 
+  $(".container").addClass("no-imageAndBorder");
+  $("h1").on("click", function () {
+    wrong.pause();
+    wrong.currentTime = 0;
+    $("body").removeClass("new-background");
+    $(".container").removeClass("no-imageAndBorder");
   });
 }
 
-function playLoop(sound){
-  var keep = new Audio("sounds/"+sound+".mp3");
-  keep.onended=playLoop;
-    keep.play();
-  }
+function playLoop(sound) {
+  var keep = new Audio("sounds/" + sound + ".mp3");
+  keep.onended = playLoop;
+  keep.play();
+}
+
+const wrong = new Audio("sounds/fail.mp3");
+
