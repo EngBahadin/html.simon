@@ -6,16 +6,11 @@ var started = false;
 var level = 0;
 var scoreLevel = level;
 var play = true;
-$("h1").text("Play");
-$("h1").click(function () {
-  playSound("play");
-});
 
-$("i").click(function () {
-  playSound("play");
-}); // this doesnt work!
+$("h1").text("Play");
 
 $(".play").on("click", function () {
+  playSound("play");
   $("h1").addClass("transition");
   setTimeout(function () {
     $("h1").addClass("display-none");
@@ -117,4 +112,3 @@ function playLoop(sound) {
 }
 
 const wrong = new Audio("sounds/fail.mp3");
-
